@@ -6,7 +6,8 @@ from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
 from collections import Counter
 from itertools import compress
-from functools import reduce
+from functools import reduce, partial
+from multiprocess import Pool
 
 
 
@@ -24,7 +25,7 @@ class LspecDatabase:
         self.path_to_unique = path_to_db + 'database/unique/'
         self.path_to_common = path_to_db + 'database/common/'
         self.path_to_resid = path_to_db + 'database/residuals/'
-        self.path_to_anti = path_to_db + 'database/residuals_anti/
+        self.path_to_anti = path_to_db + 'database/residuals_anti/'
         self.path_to_lspecs = path_to_db + 'lspecs/'
 
 
@@ -34,6 +35,8 @@ class LspecDatabase:
         self.seq_list = []
         self.seq_names = []  # names of all sequences in the analysis
         self.seq_freqs = []  # table of frequencies of sequences in the whole database
+
+        self.create_db()
 
 
     def create_db(self):
@@ -144,27 +147,51 @@ class LspecDatabase:
         with open(path_to_common + 'Common' + '.fasta', "w") as f_out:
             SeqIO.write(record, f_out, "fasta")
 
-    def intersection(self, ):
+    def intersection(self, n_threads=10):
 
-        d.split_common_unique()
+        # Split unique and common sequences
+        self.split_common_unique()
+
+        # First intersection
+        files_unique = glob.glob(self.path_to_unique + '*.fasta')
+        file_common = glob.glob(self.path_to_common + '*.fasta')[0]
+
+        part_ugene_intersect = partial(self.ugene_intersect, file_db=file_common)
+        with Pool(n_threads) as workers:
+            pmap = workers.map
+            pmap(part_ugene_intersect, files_unique)
 
 
-    def ugene_intersection(self, file_in_seqs, file_db, file_out, acc=97):
+    def ugene_intersect(self, file_in_seqs, file_db, path_to_resid=None, acc=97):
         """
 
         :param file_in_seqs:
         :param file_db:
-        :param file_out:
+        :param path_to_resid:
         :param acc:
         :return:
         """
+        if path_to_resid is None:
+            path_to_resid = self.path_to_resid
+        else:
+            self.path_to_resid = path_to_resid
+        if not os.path.exists(path_to_resid):
+            os.makedirs(path_to_resid)
+
+        s = ['/ugene-spb/ugene' + \
+                  ' --task=reduce.uwl' + \
+                  ' --accuracy=' + str(acc) + \
+                  ' --in-seqs=' + file_in_seqs + \
+                  ' --in-db=' + file_db + \
+                  ' --out=' + path_to_resid+os.path.basename(file_in_seqs)[:-6]]
+        print(s)
 
         retvalue = os.system('/ugene-spb/ugene' + \
                   ' --task=reduce.uwl' + \
                   ' --accuracy=' + str(acc) + \
                   ' --in-seqs=' + file_in_seqs + \
                   ' --in-db=' + file_db + \
-                  ' --out=' + file_out)
+                  ' --out=' + path_to_resid+os.path.basename(file_in_seqs)[:-6] + '_res.fasta')
         print(retvalue)
 
 
