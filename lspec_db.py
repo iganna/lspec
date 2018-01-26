@@ -178,7 +178,7 @@ class LspecDatabase:
         if not os.path.exists(path_to_resid):
             os.makedirs(path_to_resid)
 
-        s = ['/ugene-spb/ugene' + \
+        s = ['ugene-spb/ugene' + \
                   ' --task=reduce.uwl' + \
                   ' --accuracy=' + str(acc) + \
                   ' --in-seqs=' + file_in_seqs + \
@@ -186,7 +186,7 @@ class LspecDatabase:
                   ' --out=' + path_to_resid+os.path.basename(file_in_seqs)[:-6]]
         print(s)
 
-        retvalue = os.system('/ugene-spb/ugene' + \
+        retvalue = os.system('ugene-spb/ugene' + \
                   ' --task=reduce.uwl' + \
                   ' --accuracy=' + str(acc) + \
                   ' --in-seqs=' + file_in_seqs + \
