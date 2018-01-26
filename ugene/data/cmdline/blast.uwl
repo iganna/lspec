@@ -1,0 +1,128 @@
+#!UGENE_WORKFLOW
+
+
+
+workflow blast{
+
+    read-sequence {
+        type:read-sequence;
+        name:"Read Sequence";
+    }
+    blast-plus {
+        type:blast-plus;
+        name:"Local BLAST+ Search";
+    }
+    mark-sequence {
+        type:mark-sequence;
+        name:"Sequence Marker";
+        markers:m1;
+    }
+    filter-by-values {
+        type:filter-by-values;
+        name:Filter;
+        text:found;
+    }
+    write-sequence {
+        type:write-sequence;
+        name:"Write Sequence";
+    }
+
+    @mark-sequence.m1 {
+        type:marker;
+        marker-type:qualifier-float-value;
+        marker-name:identity;
+        qualifier-name:identity_percent;
+        ">=99":found;
+        "rest":Rest;
+    }
+
+    .actor-bindings {
+        read-sequence.out-sequence->blast-plus.in-sequence
+        filter-by-values.filtered-data->write-sequence.in-sequence
+        mark-sequence.out-marked-seq->filter-by-values.in-data
+        blast-plus.out-annotations->mark-sequence.in-sequence
+    }
+
+    read-sequence.sequence->blast-plus.in-sequence.sequence
+    blast-plus.annotations->mark-sequence.in-sequence.annotations
+    read-sequence.sequence->mark-sequence.in-sequence.sequence
+    mark-sequence.identity->filter-by-values.in-data.text
+    read-sequence.sequence->write-sequence.in-sequence.sequence {
+        path-through:filter-by-values;
+    }
+
+    .meta {
+        parameter-aliases {
+            read-sequence.url-in {
+                alias:in-file;
+            }
+            blast-plus.db-name {
+                alias:db-name;
+            }
+            blast-plus.db-path {
+                alias:db-dir;
+            }
+            write-sequence.url-out {
+                alias:out;
+            }
+        }
+        visual {
+            read-sequence {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Read Sequence</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>Reads sequence(s) from file(s).</p></body></html>";
+                tooltip:"Reads sequences and annotations if any from local or remote files.";
+                pos:"-690 -540";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                out-sequence.angle:360;
+            }
+            blast-plus {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Local BLAST+ Search</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>For sequence <span style=' text-decoration: underline;'>from Read Sequence</span> find annotations in database <a href='param:db-name'><span style=' text-decoration: underline; color:#0000ff;'>db_name</span></a></p></body></html>";
+                tooltip:"Finds annotations for DNA sequence in local database";
+                pos:"-525 -540";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                in-sequence.angle:180;
+                out-annotations.angle:360;
+            }
+            mark-sequence {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Sequence Marker</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>Adds one or several marks to the input sequence.</p></body></html>";
+                tooltip:"Adds one or several marks to the input sequence depending on the sequence properties. Use this element, for example, in conjunction with the Filter element.";
+                pos:"-360 -540";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                in-sequence.angle:180;
+                out-marked-seq.angle:360;
+            }
+            filter-by-values {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Filter</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>Filters input data from <span style=' text-decoration: underline;'>Sequence Marker</span> by value(s) <a href='param:text'><span style=' text-decoration: underline; color:#0000ff;'>found</span></a>.</p></body></html>";
+                tooltip:"Passes through only data that matches the input filter value (or values).";
+                pos:"-210 -540";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                in-data.angle:180;
+                filtered-data.angle:360;
+            }
+            write-sequence {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Write Sequence</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>Save all sequences from <span style=' text-decoration: underline;'>Read Sequence</span> to <a href='param:url-out'><span style=' text-decoration: underline; color:#ff0000;'>unset</span></a>.</p></body></html>";
+                tooltip:"Writes all supplied sequences to file(s) in selected format.";
+                pos:"-60 -540";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                in-sequence.angle:180;
+            }
+            read-sequence.out-sequence->blast-plus.in-sequence {
+                text-pos:"-27.5 -24";
+            }
+            blast-plus.out-annotations->mark-sequence.in-sequence {
+                text-pos:"-33 -24";
+            }
+            filter-by-values.filtered-data->write-sequence.in-sequence {
+                text-pos:"-34 -24";
+            }
+            mark-sequence.out-marked-seq->filter-by-values.in-data {
+                text-pos:"-45 -37";
+            }
+        }
+    }
+}
+

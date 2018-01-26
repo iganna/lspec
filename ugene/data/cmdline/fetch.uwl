@@ -1,0 +1,46 @@
+#!UGENE_WORKFLOW
+#Fetches sequences from remote database. The supported databases are accesed via alias.
+#
+#Database		Alias
+#--------		-----
+#NCBI Genbank (DNA)	genbank
+#NCBI Genbank (protein)	genbank-protein
+#Protein Data Bank	pdb
+#SwissProt		swissprot
+#Uniprot	             	uniprot
+#
+
+workflow fetch{
+
+    fetch-sequence {
+        type:fetch-sequence;
+        name:"Read from remote database";
+        database:"NCBI GenBank (DNA sequence)";
+        save-dir:.;
+    }
+
+
+    .meta {
+        aliases {
+            fetch-sequence.database:db;
+            fetch-sequence.resource-id:id;
+            fetch-sequence.save-dir:save-dir;
+        }
+        help {
+            db:"Database alias";
+            id:"Resource ID in the database. Several IDs can be separated with semicolon";
+            save-dir:"Directory to store loaded sequences";
+        }
+        visual {
+            fetch-sequence {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Read from remote database</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>Reads sequence identified with <span style=' color:#ff0000;'>unset</span> from <span style=' text-decoration: underline;'>NCBI GenBank (DNA sequence)</span> remote database. Save result to <span style=' text-decoration: underline;'>.</span> directory</p></body></html>";
+                tooltip:"Reads sequences and annotations if any from a remote database.";
+                pos:"-420 -375";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                out-sequence.angle:360;
+            }
+        }
+    }
+}
+

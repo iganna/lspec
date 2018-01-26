@@ -1,0 +1,79 @@
+#!UGENE_WORKFLOW
+
+
+
+workflow dereplicate{
+
+    dereplicate-sequences {
+        type:dereplicate-sequences;
+        name:"Dereplicate sequences";
+    }
+    read-sequence {
+        type:read-sequence;
+        name:"Read Sequence";
+    }
+    write-sequence {
+        type:write-sequence;
+        name:"Write Sequence";
+    }
+
+
+    .actor-bindings {
+        dereplicate-sequences.dereplicated-sequences->write-sequence.in-sequence
+        read-sequence.out-sequence->dereplicate-sequences.in-sequence
+    }
+
+    read-sequence.sequence->dereplicate-sequences.in-sequence.sequence
+    dereplicate-sequences.sequence->write-sequence.in-sequence.sequence
+
+    .meta {
+        parameter-aliases {
+            dereplicate-sequences.comparing-accuracy {
+                alias:accuracy;
+            }
+            dereplicate-sequences.report-url {
+                alias:report;
+            }
+            read-sequence.url-in {
+                alias:in;
+            }
+            write-sequence.url-out {
+                alias:out;
+            }
+        }
+        visual {
+            dereplicate-sequences {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Dereplicate sequences</span></p> <hr /></body></html>";
+                tooltip:"Dereplicate sequences.";
+                pos:"-412 -507";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                in-sequence.angle:180;
+                dereplicated-sequences.angle:360;
+            }
+            read-sequence {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Read Sequence</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>Reads sequence(s) from file(s).</p></body></html>";
+                tooltip:"Reads sequences and annotations if any from local or remote files.";
+                pos:"-639 -508";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                out-sequence.angle:360;
+            }
+            write-sequence {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Write Sequence</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>Сохранить все последовательности из <span style=' text-decoration: underline;'>Dereplicate sequences</span> в <a href='param:url-out'><span style=' text-decoration: underline; color:#ff0000;'>не указан</span></a>.</p></body></html>";
+                tooltip:"Writes all supplied sequences to file(s) in selected format.";
+                pos:"-172 -507";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                in-sequence.angle:180;
+            }
+            read-sequence.out-sequence->dereplicate-sequences.in-sequence {
+                text-pos:"-48.5 -33";
+            }
+            dereplicate-sequences.dereplicated-sequences->write-sequence.in-sequence {
+                text-pos:"-47 -40";
+            }
+        }
+    }
+}
+

@@ -1,0 +1,103 @@
+#!UGENE_WORKFLOW
+
+
+
+workflow random_filter{
+
+    read-sequence {
+        type:read-sequence;
+        name:"Read Sequence";
+        input-type:Directories;
+    }
+    random-filter {
+        type:random-filter;
+        name:"Random seuquence filter";
+    }
+    generate-url {
+        type:generate-url;
+        name:"Generate URL";
+    }
+    write-sequence {
+        type:write-sequence;
+        name:"Write Sequence";
+    }
+
+
+    .actor-bindings {
+        random-filter.filtered-sequences->generate-url.in-text
+        read-sequence.out-sequence->random-filter.in-sequence
+        generate-url.out-text->write-sequence.in-sequence
+    }
+
+    read-sequence.sequence->random-filter.in-sequence.sequence
+    read-sequence.url->random-filter.in-sequence.url
+    random-filter.url->generate-url.in-text.url
+    random-filter.sequence->write-sequence.in-sequence.sequence
+    generate-url.url->write-sequence.in-sequence.url
+
+    .meta {
+        parameter-aliases {
+            read-sequence.exclude-name-filter {
+                alias:exmask;
+            }
+            read-sequence.in-path {
+                alias:in-folder;
+            }
+            read-sequence.include-name-filter {
+                alias:mask;
+            }
+            generate-url.direcory {
+                alias:out-folder;
+            }
+            generate-url.suffix {
+                alias:suffix;
+            }
+        }
+        visual {
+            read-sequence {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Read Sequence</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>Reads sequence(s) from file(s).</p></body></html>";
+                tooltip:"Reads sequences and annotations if any from local or remote files.";
+                pos:"-810 -660";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                out-sequence.angle:360;
+            }
+            random-filter {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Random seuquence filter</span></p> <hr /></body></html>";
+                tooltip:"Random seuquence filter.";
+                pos:"-675 -660";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                in-sequence.angle:180;
+                filtered-sequences.angle:360;
+            }
+            generate-url {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Generate URL</span></p> <hr /></body></html>";
+                tooltip:"Generate URL.";
+                pos:"-525 -660";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                in-text.angle:180;
+                out-text.angle:360;
+            }
+            write-sequence {
+                description:"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'> <html><head><meta name='qrichtext' content='1' /><style type='text/css'> p, li { white-space: pre-wrap; } </style></head><body style=' font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;'> <p align='center' style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><span style=' font-weight:600;'>Write Sequence</span></p> <hr /> <p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>Save all sequences from <span style=' text-decoration: underline;'>Random seuquence filter</span> to <a href='param:url-out'><span style=' text-decoration: underline; color:#0000ff;'>file(s) alongside of input sources of Generate URL</span></a>.</p></body></html>";
+                tooltip:"Writes all supplied sequences to file(s) in selected format.";
+                pos:"-285 -660";
+                style:ext;
+                bg-color-ext:"0 128 128 64";
+                in-sequence.angle:180;
+            }
+            read-sequence.out-sequence->random-filter.in-sequence {
+                text-pos:"-27.5 -24";
+            }
+            random-filter.filtered-sequences->generate-url.in-text {
+                text-pos:"-45 -37";
+            }
+            generate-url.out-text->write-sequence.in-sequence {
+                text-pos:"-24 -24";
+            }
+        }
+    }
+}
+

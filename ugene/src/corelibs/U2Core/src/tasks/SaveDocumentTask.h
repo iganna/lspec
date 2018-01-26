@@ -1,0 +1,119 @@
+/**
+ * UGENE - Integrated Bioinformatics Tools.
+ * Copyright (C) 2008-2012 UniPro <ugene@unipro.ru>
+ * http://ugene.unipro.ru
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ */
+
+#ifndef _U2_SAVE_DOCUMENT_TASK_H_
+#define _U2_SAVE_DOCUMENT_TASK_H_
+
+#include <U2Core/GUrl.h>
+#include <U2Core/Task.h>
+#include <U2Core/UnloadedObject.h>
+
+#include <QtCore/QPointer>
+
+namespace U2 {
+
+class Document;
+class StateLock;
+class IOAdapterFactory;
+class DocumentFormat;
+
+enum SaveDocFlag {
+    SaveDoc_Overwrite = 0x0,
+    SaveDoc_Append = 0x1, 
+    SaveDoc_Roll = 0x2, 
+    SaveDoc_DestroyAfter = 0x4,
+    SaveDoc_DestroyButDontUnload = 0x8,
+    SaveDoc_OpenAfter = 0x16
+};
+
+typedef QFlags<SaveDocFlag>  SaveDocFlags;
+
+class U2CORE_EXPORT SaveDocumentTask : public Task {
+    Q_OBJECT
+public:
+    SaveDocumentTask(Document* doc, IOAdapterFactory* iof = NULL, const GUrl& url = GUrl(), SaveDocFlags flags = SaveDoc_Overwrite);
+    SaveDocumentTask(Document* doc, SaveDocFlags flags, const QSet<QString>& excludeFileNames = QSet<QString>());
+
+    virtual void prepare();
+
+    virtual void run();
+
+    ReportResult report();
+
+    const GUrl& getURL() const {return url;}
+
+    IOAdapterFactory* getIOAdapterFactory() const {return iof;}
+
+    const QPointer<Document>& getDocument() const {return doc;}
+
+    //used in file-name rolling mode
+    void setExcludeFileNames(const QSet<QString>& _excludeFileNames) {excludeFileNames = _excludeFileNames;}
+
+    void addFlag(SaveDocFlag f);
+
+private:
+    StateLock*          lock;
+    QPointer<Document>  doc;
+    IOAdapterFactory*   iof;
+    GUrl                url;
+    SaveDocFlags        flags;
+    QSet<QString>       excludeFileNames;
+};
+
+
+class U2CORE_EXPORT SaveMiltipleDocuments: public Task {
+    Q_OBJECT
+public:
+
+    SaveMiltipleDocuments(const QList<Document*>& docs, bool askBeforeSave);
+
+    static QList<Document*> findModifiedDocuments(const QList<Document*>& docs);
+};
+
+class U2CORE_EXPORT SaveCopyAndAddToProjectTask : public Task {
+    Q_OBJECT
+public:
+    SaveCopyAndAddToProjectTask(Document* doc, IOAdapterFactory* iof, const GUrl& url);
+    ReportResult report();
+private:
+    SaveDocumentTask*           saveTask;
+    QList<UnloadedObjectInfo>   info;
+    GUrl                        url;
+    GUrl                        origURL;
+    DocumentFormat*             df;
+    QVariantMap                 hints;
+};
+
+
+class U2CORE_EXPORT RelocateDocumentTask : public Task {
+    Q_OBJECT
+public:
+    RelocateDocumentTask(const GUrl& fromURL, const GUrl& toURL);
+    ReportResult report();
+
+public:
+    GUrl fromURL;
+    GUrl toURL;
+};
+
+}//namespace
+
+#endif
