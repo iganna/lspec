@@ -162,6 +162,21 @@ class LspecDatabase:
             pmap(part_ugene_intersect, files_unique)
 
 
+        # Creat anti-libraries
+        self.creare_anti_lib()
+
+        # Get files with residuals and anti-residuals
+        files_resid = glob.glob(self.path_to_resid + '*.fasta')
+        files_anti = glob.glob(self.path_to_anti + '*.fasta')
+
+        part_ugene_intersect = partial(self.ugene_intersect, path_to_resid=self.path_to_lspecs)
+        with Pool(n_threads) as workers:
+            pmap = workers.map
+            pmap(self.ugene_intersect, files_resid, files_anti)
+
+
+
+
     def ugene_intersect(self, file_in_seqs, file_db, path_to_resid=None, acc=97):
         """
 
@@ -178,14 +193,6 @@ class LspecDatabase:
         if not os.path.exists(path_to_resid):
             os.makedirs(path_to_resid)
 
-        s = ['ugene-spb/ugene' + \
-                  ' --task=reduce.uwl' + \
-                  ' --accuracy=' + str(acc) + \
-                  ' --in-seqs=' + file_in_seqs + \
-                  ' --in-db=' + file_db + \
-                  ' --out=' + path_to_resid+os.path.basename(file_in_seqs)[:-6]]
-        print(s)
-
         retvalue = os.system('ugene-spb/ugene' + \
                   ' --task=reduce.uwl' + \
                   ' --accuracy=' + str(acc) + \
@@ -195,7 +202,7 @@ class LspecDatabase:
         print(retvalue)
 
 
-    def creare_anti_lib(self, path_to_libs, path_to_antilib=None):
+    def creare_anti_lib(self, path_to_libs=None, path_to_antilib=None):
         """
 
         :param path_to_libs:
@@ -203,10 +210,11 @@ class LspecDatabase:
         :return:
         """
 
-        # path_to_libs = '/Users/anna/OneDrive/pushkin/criminal/scripts/lspec/data_soil/pure_ref/dsgn29/database/unique/'
+        if path_to_libs is None:
+            path_to_libs = self.path_to_resid
 
         if path_to_antilib is None:
-            path_to_antilib = path_to_libs[:-1] + '_anti/'
+            path_to_antilib = self.path_to_anti
 
         if not os.path.exists(path_to_antilib):
             os.makedirs(path_to_antilib)
