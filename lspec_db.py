@@ -149,17 +149,17 @@ class LspecDatabase:
 
     def intersection(self, n_threads=10):
 
-        # Split unique and common sequences
-        self.split_common_unique()
-
-        # First intersection
-        files_unique = glob.glob(self.path_to_unique + '*.fasta')
-        file_common = glob.glob(self.path_to_common + '*.fasta')[0]
-
-        part_ugene_intersect = partial(self.ugene_intersect, file_db=file_common)
-        with Pool(n_threads) as workers:
-            pmap = workers.map
-            pmap(part_ugene_intersect, files_unique)
+        # # Split unique and common sequences
+        # self.split_common_unique()
+        #
+        # # First intersection
+        # files_unique = glob.glob(self.path_to_unique + '*.fasta')
+        # file_common = glob.glob(self.path_to_common + '*.fasta')[0]
+        #
+        # part_ugene_intersect = partial(self.ugene_intersect, file_db=file_common)
+        # with Pool(n_threads) as workers:
+        #     pmap = workers.map
+        #     pmap(part_ugene_intersect, files_unique)
 
 
         # Creat anti-libraries
@@ -169,10 +169,12 @@ class LspecDatabase:
         files_resid = glob.glob(self.path_to_resid + '*.fasta')
         files_anti = glob.glob(self.path_to_anti + '*.fasta')
 
-        part_ugene_intersect = partial(self.ugene_intersect, path_to_resid=self.path_to_lspecs)
         with Pool(n_threads) as workers:
             pmap = workers.map
-            pmap(self.ugene_intersect, files_resid, files_anti)
+            pmap(lambda x:
+                 self.ugene_intersect(x[0], x[1], 
+                                      path_to_resid=self.path_to_lspecs),
+                 zip(files_resid, files_anti))
 
 
 
@@ -190,6 +192,7 @@ class LspecDatabase:
             path_to_resid = self.path_to_resid
         else:
             self.path_to_resid = path_to_resid
+
         if not os.path.exists(path_to_resid):
             os.makedirs(path_to_resid)
 
