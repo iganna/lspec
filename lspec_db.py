@@ -172,7 +172,7 @@ class LspecDatabase:
         with Pool(n_threads) as workers:
             pmap = workers.map
             pmap(lambda x:
-                 self.ugene_intersect(x[0], x[1], 
+                 self.ugene_intersect(x[0], x[1],
                                       path_to_resid=self.path_to_lspecs),
                  zip(files_resid, files_anti))
 
