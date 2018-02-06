@@ -43,7 +43,7 @@ class LspecSignals:
                              ' --sample=' + file_test + \
                              ' --markers-dir=' + self.path_to_lspecs + \
                              ' --report=' + self.path_to_signals + \
-                             'report' + + os.path.basename(file_test)[:-6] + '.txt' + \
+                             'report' + os.path.basename(file_test)[:-6] + '.txt' + \
                              ' --sample-reports-dir=' + self.path_to_signals + \
                              ' --acc=' + str(acc))
 
