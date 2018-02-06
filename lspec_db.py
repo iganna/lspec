@@ -75,7 +75,7 @@ class LspecDatabase:
         for i, freqs in enumerate(self.seq_freqs):
             if sum(freqs != 0) == 1:
                 i_sample = list(freqs != 0).index(True)
-                self.seq_names += ['New' + self.samples[i_sample] + '_' + \
+                self.seq_names += ['New' + self.samples[i_sample] + '_' +
                                    '{:06}'.format(cnt_seqs_in_samples[i_sample])]
                 cnt_seqs_in_samples[i_sample] += 1
             else:
@@ -177,8 +177,6 @@ class LspecDatabase:
                  zip(files_resid, files_anti))
 
 
-
-
     def ugene_intersect(self, file_in_seqs, file_db, path_to_resid=None, acc=97):
         """
 
@@ -196,12 +194,13 @@ class LspecDatabase:
         if not os.path.exists(path_to_resid):
             os.makedirs(path_to_resid)
 
-        retvalue = os.system('ugene-spb/ugene' + \
-                  ' --task=reduce.uwl' + \
-                  ' --accuracy=' + str(acc) + \
-                  ' --in-seqs=' + file_in_seqs + \
-                  ' --in-db=' + file_db + \
-                  ' --out=' + path_to_resid+os.path.basename(file_in_seqs)[:-6] + '_res.fasta')
+        retvalue = os.system('ugene-spb/ugene' +
+                             ' --task=reduce.uwl' +
+                             ' --accuracy=' + str(acc) +
+                             ' --in-seqs=' + file_in_seqs +
+                             ' --in-db=' + file_db +
+                             ' --out=' + path_to_resid+os.path.basename(file_in_seqs)[:-6] +
+                             '_res.fasta')
         print(retvalue)
 
 
