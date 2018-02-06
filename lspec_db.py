@@ -169,6 +169,9 @@ class LspecDatabase:
         files_resid = glob.glob(self.path_to_resid + '*.fasta')
         files_anti = glob.glob(self.path_to_anti + '*.fasta')
 
+        print(files_resid)
+        print(files_anti)
+
         with Pool(n_threads) as workers:
             pmap = workers.map
             pmap(lambda x:
