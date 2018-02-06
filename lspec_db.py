@@ -170,9 +170,8 @@ class LspecDatabase:
         files_anti = glob.glob(self.path_to_anti + '*.fasta')
 
         files_resid.sort()
+        files_resid.sort()
 
-        print(files_resid)
-        print(files_anti)
 
         with Pool(n_threads) as workers:
             pmap = workers.map
