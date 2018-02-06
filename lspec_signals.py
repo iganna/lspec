@@ -38,13 +38,13 @@ class LspecSignals:
         :return:
         """
 
-        retvalue = os.system('ugene-spb/ugene' +
-                             ' --task=intersections' +
-                             ' --sample=' + file_test +  # one test library
-                             ' --markers-dir=' + self.path_to_lspecs +  # directory with many marker files
-                             ' --report=' + self.path_to_signals +
-                             'report' + + os.path.basename(file_test)[:-6] + '.txt' 
-                             ' --sample-reports-dir=' + self.path_to_signals +
+        retvalue = os.system('ugene-spb/ugene' + \
+                             ' --task=intersections' + \
+                             ' --sample=' + file_test + \
+                             ' --markers-dir=' + self.path_to_lspecs + \
+                             ' --report=' + self.path_to_signals + \
+                             'report' + + os.path.basename(file_test)[:-6] + '.txt' + \
+                             ' --sample-reports-dir=' + self.path_to_signals + \
                              ' --acc=' + str(acc))
 
         print(retvalue)
