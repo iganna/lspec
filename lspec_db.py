@@ -166,8 +166,8 @@ class LspecDatabase:
         self.creare_anti_lib()
 
         # Get files with residuals and anti-residuals
-        files_resid = glob.glob(self.path_to_resid + '*.fasta')
-        files_anti = glob.glob(self.path_to_anti + '*.fasta')
+        files_resid = glob.glob(self.path_to_resid + '*.fasta').sort()
+        files_anti = glob.glob(self.path_to_anti + '*.fasta').sort()
 
         print(files_resid)
         print(files_anti)
