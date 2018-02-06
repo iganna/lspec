@@ -238,10 +238,10 @@ class LspecDatabase:
         # Create anti-libraries
         for i, f in enumerate(f_libs):
             anti_lib = reduce(lambda lib1, lib2: lib1 + lib2, libs[:i]+libs[i+1:])
-            if i != len(f_libs):
-                anti_lib = libs[i+1]
-            else:
-                anti_lib = libs[0]
+            # if i != len(f_libs):
+            #     anti_lib = libs[i+1]
+            # else:
+            #     anti_lib = libs[0]
 
             SeqIO.write(anti_lib, path_to_antilib + os.path.basename(f)[:-6] + '_anti.fasta', "fasta")
 
