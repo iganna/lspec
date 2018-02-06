@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5f10f4-26f7-43a3-8bd0-2f3f9fdf3b0e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals/An001.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals/An011.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals/An014.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals/An068.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals/An069.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals_anti/An001_anti.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals_anti/An011_anti.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals_anti/An014_anti.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals_anti/An068_anti.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/residuals_anti/An069_anti.fasta" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/db_table.txt" afterPath="$PROJECT_DIR$/data_soil/pure_ref/dsgn05/database/db_table.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lspec_contrib.py" afterPath="$PROJECT_DIR$/lspec_contrib.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lspec_db.py" afterPath="$PROJECT_DIR$/lspec_db.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lspec_contrib.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,24 +24,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="19" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lspec_contrib.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lspec_contrib.py">
+      <file leaf-file-name="lspec_signals.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lspec_signals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-              <folding>
-                <element signature="e#67#101#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,9 +61,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/lspec_db.py" />
         <option value="$PROJECT_DIR$/lspec_contrib.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -187,9 +174,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding>
-            <element signature="e#67#101#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -197,7 +182,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -213,9 +200,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding>
-            <element signature="e#67#101#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -223,14 +208,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/lspec_contrib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+        <state relative-caret-position="102">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -243,12 +230,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lspec_contrib.py">
+    <entry file="file://$PROJECT_DIR$/lspec_signals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+        <state relative-caret-position="195">
+          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="19" selection-end-column="51" />
           <folding>
-            <element signature="e#67#101#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
