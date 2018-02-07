@@ -87,7 +87,7 @@ class LspecSignals:
                              ' --in-seqs=' + file_test +
                              ' --in-db=' + file_lspec +
                              ' --out=' + self.path_to_signals +
-                             os.path.basename(file_test)[:-6] + '-' +
+                             os.path.basename(file_test)[:-6] + '_' +
                              os.path.basename(file_lspec)[:-6] +
                              '_Nsignal.fasta')
         print(retvalue)
@@ -98,7 +98,7 @@ class LspecSignals:
                              ' --in-seqs=' +  file_lspec +
                              ' --in-db=' + file_test +
                              ' --out=' + self.path_to_signals +
-                             os.path.basename(file_lspec)[:-6] + '-' +
+                             os.path.basename(file_lspec)[:-6] + '_' +
                              os.path.basename(file_test)[:-6] +
                              '_Msignal.fasta')
         print(retvalue)

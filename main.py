@@ -21,6 +21,6 @@ path_to_lspec = 'data_simulation/lspecs/'
 path_to_test = 'data_simulation/test/'
 signals = LspecSignals(path_to_lspec, path_to_test)
 # signals.intersect()
-signals.intersect_approxim()
+signals.intersect_approxim(29)
 
 
