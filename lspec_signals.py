@@ -127,6 +127,9 @@ class LspecSignals:
         files_test = glob.glob(self.path_to_test + '*.fasta')
         files_lspec = glob.glob(self.path_to_lspecs + '*.fasta')
 
+        files_test.sort()
+        files_lspec.sort()
+
         # Count number of sequences in initial test files
         for i_test, file_test in enumerate(files_test):
             records = list(SeqIO.parse(file_test, "fasta"))
@@ -159,10 +162,10 @@ class LspecSignals:
             tmp_records = list(SeqIO.parse(file_m_signal, "fasta"))
             self.signal_m[i_test, i_lspec] = self.signal_M[i_lspec] - len(tmp_records)
 
-            np.savetxt(path_to_tables + 'signal_N.txt', self.signal_N.astype(int))
-            np.savetxt(path_to_tables + 'signal_M.txt', self.signal_M.astype(int))
-            np.savetxt(path_to_tables + 'signal_n.txt', self.signal_n.astype(int))
-            np.savetxt(path_to_tables + 'signal_m.txt', self.signal_m.astype(int))
+            np.savetxt(path_to_tables + 'signal_N.txt', self.signal_N.astype(int), fmt='%i')
+            np.savetxt(path_to_tables + 'signal_M.txt', self.signal_M.astype(int), fmt='%i')
+            np.savetxt(path_to_tables + 'signal_n.txt', self.signal_n.astype(int), fmt='%i')
+            np.savetxt(path_to_tables + 'signal_m.txt', self.signal_m.astype(int), fmt='%i')
 
     def calc_contributions(self):
         pass
