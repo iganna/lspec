@@ -159,10 +159,10 @@ class LspecSignals:
             tmp_records = list(SeqIO.parse(file_m_signal, "fasta"))
             self.signal_m[i_test, i_lspec] = self.signal_M[i_lspec] - len(tmp_records)
 
-            np.savetxt(path_to_tables + 'signal_N.txt', self.signal_N)
-            np.savetxt(path_to_tables + 'signal_M.txt', self.signal_M)
-            np.savetxt(path_to_tables + 'signal_n.txt', self.signal_n)
-            np.savetxt(path_to_tables + 'signal_m.txt', self.signal_m)
+            np.savetxt(path_to_tables + 'signal_N.txt', self.signal_N.astype(int))
+            np.savetxt(path_to_tables + 'signal_M.txt', self.signal_M.astype(int))
+            np.savetxt(path_to_tables + 'signal_n.txt', self.signal_n.astype(int))
+            np.savetxt(path_to_tables + 'signal_m.txt', self.signal_m.astype(int))
 
     def calc_contributions(self):
         pass
