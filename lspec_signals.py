@@ -129,12 +129,12 @@ class LspecSignals:
 
         # Count number of sequences in initial test files
         for i_test, file_test in enumerate(files_test):
-            records = list(SeqIO.parse(self.path_to_test + file_test, "fasta"))
+            records = list(SeqIO.parse(file_test, "fasta"))
             self.signal_N[i_test] = len(records)
 
         # Count number of sequences in initialLSPEC files
         for i_lspec, file_lspec in enumerate(files_lspec):
-            records = list(SeqIO.parse(self.path_to_lspecs + file_lspec, "fasta"))
+            records = list(SeqIO.parse(file_lspec, "fasta"))
             self.signal_M[i_lspec] = len(records)
 
 
