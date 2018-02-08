@@ -22,6 +22,16 @@ for s in n_ref_samples:
     # signals.intersect()
     signals.intersect_approxim(30)
 
+n_ref_samples = ['01', '02', '03', '04', '05']
+for s in n_ref_samples:
+    path_to_lspec = 'data_simulation/norm01/design_' + s + '/' + 'lspecs/'
+    path_to_test = 'data_simulation/norm01/a_artificial/'
+    path_to_signals = path_to_test + 'result_' + s + '/'
+    path_to_tables = path_to_test + 'signals_' + s + '/'
+    signals = LspecSignals(path_to_lspec, path_to_test, path_to_signals)
+    signals.calc_signals_approxim(path_to_tables)
+
+
 
 
 
