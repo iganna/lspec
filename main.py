@@ -35,6 +35,7 @@ for i, n_seq in enumerate(n_norm_seqs):
 
 #The path with UGENE scripts
 path_to_ugene = 'ugene-spb/'
+
 for path_db in path_to_db:
     print(path_db)
     d = LspecDatabase(path_db)
@@ -68,8 +69,7 @@ for i, path_db in enumerate(path_to_db):
     path_to_signals = path_to_test + 'result_' + str(i+1) + '/'
     signals = LspecSignals(path_to_lspecs, path_to_test, path_to_signals)
     signals.intersect_approxim(30)
-    values_of_signals = signals.calc_contributions()
-    print(values_of_signals)
+
 
 
 

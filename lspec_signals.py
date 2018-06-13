@@ -1,4 +1,11 @@
 """ This file contain functions to gec contributions of lspecs """
+
+
+__author__ = "Anna Igolkina"
+__license__ = "MIT"
+__maintainer__ = "Anna Igolkina"
+__email__ = "igolkinaanna11@gmail.com"
+
 from lspec_db import LspecDatabase
 import numpy as np
 import os
@@ -7,8 +14,8 @@ from itertools import product
 import glob
 from multiprocess import Pool
 from Bio import SeqIO
-from Bio.SeqRecord import SeqRecord
-from Bio.Seq import Seq
+# from Bio.SeqRecord import SeqRecord
+# from Bio.Seq import Seq
 
 
 class LspecSignals:
@@ -39,6 +46,13 @@ class LspecSignals:
         self.signal_p = np.empty((n_tests, n_lspecs))
 
     def intersect(self, n_threads=10, acc=99):
+        """
+        This function performed intersection of a test sample with each LSPEC
+        in a parallel mode
+        :param n_threads: number of threads
+        :param acc: accuracy of intersection
+        :return: None
+        """
 
         files_unique = glob.glob(self.path_to_test + '*.fasta')
         part_ugene_intersect = partial(self.ugene_intersect, acc=acc)
@@ -48,10 +62,11 @@ class LspecSignals:
 
     def ugene_intersect(self, file_test, acc=99):
         """
-
-        :param file_test:
-        :param acc:
-        :return:
+        This function evokes UGENE script to intersect one test samples
+        with one LSPEC
+        :param file_test: file with a test sample
+        :param acc: accuracy of intersection
+        :return: None
         """
 
         print('ugene-spb/ugene' + \
@@ -75,7 +90,13 @@ class LspecSignals:
         print(retvalue)
 
     def intersect_approxim(self, n_threads=10, acc=99):
-
+        """
+        This function performed intersection of a test sample with each LSPEC
+        in a parallel mode via the same procedure as the LSPEC extraction
+        :param n_threads: number of threads
+        :param acc: accuracy of intersection
+        :return: None
+        """
         files_test = glob.glob(self.path_to_test + '*.fasta')
         files_lspec = glob.glob(self.path_to_lspecs + '*.fasta')
 
@@ -91,10 +112,11 @@ class LspecSignals:
 
     def ugene_intersect_approxim(self, file_test, file_lspec, acc=99):
         """
-
-        :param file_test:
-        :param acc:
-        :return:
+        This function evokes UGENE script to intersect one test samples
+        with one LSPEC via the same procedure as the LSPEC extraction
+        :param file_test: file with a test sample
+        :param acc: accuracy of intersection
+        :return: None
         """
         retvalue = os.system('ugene-spb/ugene' +
                              ' --task=reduce.uwl' +
@@ -120,6 +142,12 @@ class LspecSignals:
 
 
     def calc_signals_approxim(self, path_to_tables):
+        """
+        This function calculates the main parameters to find signal of a LSPEC
+        in a test library
+        :param path_to_tables: path to results
+        :return: None
+        """
 
         if not os.path.exists(path_to_tables):
             os.makedirs(path_to_tables)
@@ -166,6 +194,9 @@ class LspecSignals:
         np.savetxt(path_to_tables + 'signal_m_size.txt', self.signal_M.astype(int), fmt='%i')
         np.savetxt(path_to_tables + 'signal_n.txt', self.signal_n.astype(int), fmt='%i')
         np.savetxt(path_to_tables + 'signal_m.txt', self.signal_m.astype(int), fmt='%i')
+
+        values_of_signals = self.calc_contributions()
+        print(values_of_signals)
 
     def calc_contributions(self):
         pass

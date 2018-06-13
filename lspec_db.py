@@ -1,3 +1,12 @@
+"""
+This module contains functions to extract LSPECs from a set of control samples
+"""
+
+__author__ = "Anna Igolkina"
+__license__ = "MIT"
+__maintainer__ = "Anna Igolkina"
+__email__ = "igolkinaanna11@gmail.com"
+
 import numpy as np
 import os
 import glob
@@ -40,7 +49,7 @@ def normalize(path_to_initial, path_to_normalized, n_norm_seqs):
 
 def calc_lspec_size(path_to_lspecs, file_freq_table):
     """
-
+    This function calculates the size of LSPECs
     :param path_to_lspec:
     :param path_to_table:
     :return:
