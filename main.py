@@ -14,7 +14,7 @@ def drange(start, stop, step):
 # then run the normalisation of initial libraries to a fixed numeber of
 # sequences
 
-path_to_initial = 'data_init/'
+path_to_initial = 'data/control_samples/'
 
 path_to_db = []
 n_norm_seqs = drange(1000, 10000, 2000)
@@ -33,34 +33,24 @@ for i, n_seq in enumerate(n_norm_seqs):
 # path_to_db = ...
 # In this example  this path was defines in the previous section
 
-# The path with UGENE scripts
+#The path with UGENE scripts
 path_to_ugene = 'ugene-spb/'
-dabatases = []
 for path_db in path_to_db:
     print(path_db)
     d = LspecDatabase(path_db)
-    dabatases += [d]
-    # 20 is a number of threads
+    #20 is a number of threads
     d.intersection(20)
 
-#
-# n_ref_samples = ['01', '02', '03', '04', '05']
-# for s in n_ref_samples:
-#     path_to_db = 'data_simulation/norm01/design_' + s + '/'
-#
-#     d = LspecDatabase(path_to_db)
-#     d.intersection(20)
 
 # --------------------------------------------------------------
-# Get numer of sequences in LSPECs
+# Get number of sequences in LSPECs
 # --------------------------------------------------------------
-
 
 n_seqs = []
 for path_db in path_to_db:
     path_to_lspecs = path_db + 'lspecs/'
     file_freq_table = path_db + 'database/db_table.txt'
-    n_seqs += calc_lspec_size(path_to_lspecs, file_freq_table)
+    n_seqs += [calc_lspec_size(path_to_lspecs, file_freq_table)]
 
 print(n_seqs)
 
@@ -70,30 +60,16 @@ print(n_seqs)
 # You need to set three paths:
 # path_to_lspec - path to the folder with LSPECs
 # path_to_test - path to the folder with target libraries
-#
+# path_to_signals - path with results
 
-
-
-#
-# n_ref_samples = ['01', '02', '03', '04', '05']
-# for s in n_ref_samples:
-#     path_to_lspec = 'data_simulation/norm01/design_' + s + '/' + 'lspecs/'
-#     path_to_test = 'data_simulation/norm01/a_artificial/'
-#     path_to_signals = path_to_test + 'result_' + s + '/'
-#     signals = LspecSignals(path_to_lspec, path_to_test, path_to_signals)
-#     # signals.intersect()
-#     signals.intersect_approxim(30)
-
-# n_ref_samples = ['01', '02', '03', '04', '05']
-# for s in n_ref_samples:
-#     path_to_lspec = 'data_simulation/norm01/design_' + s + '/' + 'lspecs/'
-#     path_to_test = 'data_simulation/norm01/a_artificial/'
-#     path_to_signals = path_to_test + 'result_' + s + '/'
-#     path_to_tables = path_to_test + 'signals_' + s + '/'
-#     signals = LspecSignals(path_to_lspec, path_to_test, path_to_signals)
-#     signals.calc_signals_approxim(path_to_tables)
-
-
+path_to_test = 'data/test_samples/'
+for i, path_db in enumerate(path_to_db):
+    path_to_lspecs = path_db + 'lspecs/'
+    path_to_signals = path_to_test + 'result_' + str(i+1) + '/'
+    signals = LspecSignals(path_to_lspecs, path_to_test, path_to_signals)
+    signals.intersect_approxim(30)
+    values_of_signals = signals.calc_contributions()
+    print(values_of_signals)
 
 
 

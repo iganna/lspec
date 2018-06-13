@@ -61,8 +61,10 @@ def calc_lspec_size(path_to_lspecs, file_freq_table):
     freqs_of_lspecs = []
     for i, f in enumerate(lspecs_files):
         records = list(SeqIO.parse(f, "fasta"))
-        lspec_freqs = [seq_freqs[record.id][i] for record in records]
+        lspec_freqs = [sum(seq_freqs[record.id]) for record in records]
         freqs_of_lspecs += [sum(lspec_freqs)]
+
+    return freqs_of_lspecs
 
 
 
