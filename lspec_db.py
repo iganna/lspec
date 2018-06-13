@@ -8,7 +8,7 @@ from collections import Counter
 from itertools import compress
 from functools import reduce, partial
 from multiprocess import Pool
-from random import randrange
+import re
 
 
 def normalize(path_to_initial, path_to_normalized, n_norm_seqs):
@@ -38,6 +38,31 @@ def normalize(path_to_initial, path_to_normalized, n_norm_seqs):
             SeqIO.write(norm_records, f_out, "fasta")
 
 
+def calc_lspec_size(path_to_lspecs, file_freq_table):
+    """
+
+    :param path_to_lspec:
+    :param path_to_table:
+    :return:
+    """
+
+    # Read table
+    seq_freqs = dict()
+    with open(file_freq_table, "r") as f_table:
+        for line in f_table:
+            str_all = re.findall(r'\w+', line)
+            str_name = str_all[0]
+            freqs = [int(elem) for elem in str_all[2:]]
+            seq_freqs[str_name] = freqs
+
+
+    # Read Lspec and calc frequency
+    lspecs_files = glob.glob(path_to_lspecs + '*.fasta')
+    freqs_of_lspecs = []
+    for i, f in enumerate(lspecs_files):
+        records = list(SeqIO.parse(f, "fasta"))
+        lspec_freqs = [seq_freqs[record.id][i] for record in records]
+        freqs_of_lspecs += [sum(lspec_freqs)]
 
 
 

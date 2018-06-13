@@ -1,4 +1,4 @@
-from lspec_db import LspecDatabase, normalize
+from lspec_db import LspecDatabase, normalize, calc_lspec_size
 from lspec_signals import LspecSignals
 
 
@@ -35,11 +35,13 @@ for i, n_seq in enumerate(n_norm_seqs):
 
 # The path with UGENE scripts
 path_to_ugene = 'ugene-spb/'
+dabatases = []
 for path_db in path_to_db:
     print(path_db)
     d = LspecDatabase(path_db)
+    dabatases += [d]
     # 20 is a number of threads
-    d.intersection(20)
+    # d.intersection(20)
 
 #
 # n_ref_samples = ['01', '02', '03', '04', '05']
@@ -50,12 +52,26 @@ for path_db in path_to_db:
 #     d.intersection(20)
 
 # --------------------------------------------------------------
-# Git signals of LSPECs in target samples
+# Get numer of sequences in LSPECs
+# --------------------------------------------------------------
+
+
+n_seqs = []
+for path_db in path_to_db:
+    path_to_lspecs = path_db + 'lspecs/'
+    file_freq_table = path_db + 'database/db_table.txt'
+    n_seqs += calc_lspec_size(path_to_lspecs, file_freq_table)
+
+print(n_seqs)
+
+# --------------------------------------------------------------
+# Get signals of LSPECs in target samples
 # --------------------------------------------------------------
 # You need to set three paths:
 # path_to_lspec - path to the folder with LSPECs
 # path_to_test - path to the folder with target libraries
 #
+
 
 
 #
