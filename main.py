@@ -21,7 +21,7 @@ n_norm_seqs = drange(1000, 10000, 2000)
 for i, n_seq in enumerate(n_norm_seqs):
     path_to_normalized = path_to_initial + 'norm' + '{:02d}/'.format(i+1)
     path_to_db += [path_to_normalized]
-    # normalize(path_to_initial, path_to_normalized, n_seq)
+    normalize(path_to_initial, path_to_normalized, n_seq)
 
 
 
@@ -34,14 +34,14 @@ for i, n_seq in enumerate(n_norm_seqs):
 # In this example  this path was defines in the previous section
 
 # The path with UGENE scripts
-# path_to_ugene = 'ugene-spb/'
-# dabatases = []
-# for path_db in path_to_db:
-#     print(path_db)
-#     d = LspecDatabase(path_db)
-#     dabatases += [d]
+path_to_ugene = 'ugene-spb/'
+dabatases = []
+for path_db in path_to_db:
+    print(path_db)
+    d = LspecDatabase(path_db)
+    dabatases += [d]
     # 20 is a number of threads
-    # d.intersection(20)
+    d.intersection(20)
 
 #
 # n_ref_samples = ['01', '02', '03', '04', '05']
