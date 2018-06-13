@@ -51,7 +51,10 @@ signals.intersect_approxim(n_thr)
 
 ## Requirements
 
-To run BernMix methods you need Python 3.4 or later. 
+To run methods you need Python 3.4 or later, Biopython, multiprocess and numpy.
+UGENE script are available by the following reference:
+https://local.ugene.unipro.ru/svn/ugene/branches/spb/
+To build it, Qt 4.8.4 is required (see README for UGENE).
 
 ## Authors
 
