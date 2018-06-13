@@ -34,12 +34,12 @@ for i, n_seq in enumerate(n_norm_seqs):
 # In this example  this path was defines in the previous section
 
 # The path with UGENE scripts
-path_to_ugene = 'ugene-spb/'
-dabatases = []
-for path_db in path_to_db:
-    print(path_db)
-    d = LspecDatabase(path_db)
-    dabatases += [d]
+# path_to_ugene = 'ugene-spb/'
+# dabatases = []
+# for path_db in path_to_db:
+#     print(path_db)
+#     d = LspecDatabase(path_db)
+#     dabatases += [d]
     # 20 is a number of threads
     # d.intersection(20)
 
