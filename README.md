@@ -25,6 +25,7 @@ normalize(path_to_controls, path_to_normalized, n_seq)
 
 * Extraction of LSPECs
 ```
+from lspec_db import LspecDatabase
 # Directory with normalised samples
 path_db = path_to_normalized
 # Create an auxiliary structure 
@@ -36,6 +37,7 @@ d.intersection(n_thr)
 
 * Intersection of LSPECs with a test samples
 ```
+from lspec_signals import LspecSignals
 # Directory with test samples 
 path_to_test = 'data/test_samples/'
 # Directory with results
