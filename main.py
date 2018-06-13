@@ -41,7 +41,6 @@ for path_db in path_to_db:
     d = LspecDatabase(path_db)
     dabatases += [d]
     # 20 is a number of threads
-    
     d.intersection(20)
 
 #
