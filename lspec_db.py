@@ -8,6 +8,37 @@ from collections import Counter
 from itertools import compress
 from functools import reduce, partial
 from multiprocess import Pool
+from random import randrange
+
+
+def normalize(path_to_initial, path_to_normalized, n_norm_seqs):
+    """
+    Normalize initial samples by the fixed number of sequences
+    :param path_to_initial: path with initial samples
+    :param path_to_normalized: parent path with normalized samples
+    :param n_norm_seqs: number of sequences to randomely choose from the
+                        initial samples
+    :return: path with normalized samples
+    """
+    init_files = glob.glob(path_to_initial + '*.fasta')
+
+    if not os.path.exists(path_to_normalized):
+        os.makedirs(path_to_normalized)
+
+    for f in init_files:
+        records = list(SeqIO.parse(f, "fasta"))
+        if n_norm_seqs >= len(records):
+            norm_records = records
+        else:
+            idx = np.random.choice(len(records), size=n_norm_seqs,
+                                   replace=False)
+            norm_records = [r for i, r in enumerate(records) if i in idx]
+        with open(path_to_normalized + os.path.basename(f)[:-6] + \
+                  '_norm.fasta', "w") as f_out:
+            SeqIO.write(norm_records, f_out, "fasta")
+
+
+
 
 
 

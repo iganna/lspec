@@ -2,8 +2,106 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5f10f4-26f7-43a3-8bd0-2f3f9fdf3b0e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lspec_signals.py" afterPath="$PROJECT_DIR$/lspec_signals.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An006_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An011_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An014_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An020_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An022_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An025_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An028_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An035_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An036_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An048_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An056_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An059_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An060_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An061_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An066_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An068_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An076_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An078_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An079_yes_out_yes_out.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/test/A40.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_simulation/test/An096.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An001.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An006.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An007.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An008.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An011.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An014.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An020.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An022.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An025.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An027.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An028.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An035.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An036.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An039.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An048.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An051.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An055.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An056.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An058.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An059.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An060.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An061.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An066.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An068.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An069.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An076.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An078.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An079.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An085.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An001.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An006.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An007.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An008.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An011.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An014.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An048.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An051.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An058.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An059.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An060.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An068.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An069.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An001.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An011.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An014.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An068.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An069.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An001.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An006.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An007.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An008.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An011.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An014.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An020.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An022.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An025.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An027.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An028.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An035.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An036.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An039.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An048.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An051.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An055.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An056.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An058.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An059.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An060.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An061.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An066.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An068.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An069.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An076.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An078.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An079.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An085.fasta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lspec_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/lspec_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,31 +115,35 @@
       <file leaf-file-name="lspec_db.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lspec_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="19" selection-end-column="51" />
+            <state relative-caret-position="140">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lspec_signals.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lspec_signals.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lspec_signals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="46" column="80" lean-forward="false" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
-              <folding />
+            <state relative-caret-position="2070">
+              <caret line="138" column="58" selection-start-line="138" selection-start-column="58" selection-end-line="138" selection-end-column="58" />
+              <folding>
+                <element signature="e#67#101#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,16 +157,21 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>split_common_unique</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lspec_db.py" />
         <option value="$PROJECT_DIR$/lspec_contrib.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/lspec_signals.py" />
+        <option value="$PROJECT_DIR$/lspec_db.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -74,22 +181,10 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -101,6 +196,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -118,8 +214,8 @@
       </list>
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -135,56 +231,95 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09861111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31527779" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09942775" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="right" id="Python Console" order="4" visible="true" weight="0.31473532" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lspec_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lspec_contrib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lspec_signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="138" column="58" selection-start-line="138" selection-start-column="58" selection-end-line="138" selection-end-column="58" />
+          <folding>
+            <element signature="e#67#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lspec_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lspec_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lspec_contrib.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -192,60 +327,52 @@
     <entry file="file://$PROJECT_DIR$/lspec_db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3375">
-          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lspec_contrib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lspec_contrib.py">
+    <entry file="file://$PROJECT_DIR$/lspec_contrib.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lspec_contrib.py" />
+    <entry file="file://$PROJECT_DIR$/lspec_signals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="138" column="58" selection-start-line="138" selection-start-column="58" selection-end-line="138" selection-end-column="58" />
+          <folding>
+            <element signature="e#67#101#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lspec_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="140">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="19" selection-end-column="51" />
+        <state relative-caret-position="540">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lspec_signals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="46" column="80" lean-forward="false" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
