@@ -2,105 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5f10f4-26f7-43a3-8bd0-2f3f9fdf3b0e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An006_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An011_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An014_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An020_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An022_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An025_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An028_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An035_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An036_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An048_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An056_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An059_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An060_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An061_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An066_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An068_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An076_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An078_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/lspecs/An079_yes_out_yes_out.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/test/A40.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_simulation/test/An096.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An001.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An006.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An007.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An008.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An011.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An014.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An020.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An022.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An025.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An027.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An028.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An035.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An036.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An039.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An048.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An051.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An055.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An056.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An058.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An059.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An060.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An061.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An066.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An068.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An069.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An076.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An078.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An079.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_origins/An085.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An001.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An006.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An007.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An008.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An011.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An014.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An048.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An051.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An058.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An059.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An060.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An068.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_mixture/An069.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An001.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An011.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An014.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An068.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_pure/An069.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An001.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An006.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An007.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An008.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An011.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An014.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An020.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An022.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An025.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An027.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An028.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An035.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An036.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An039.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An048.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An051.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An055.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An056.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An058.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An059.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An060.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An061.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An066.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An068.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An069.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An076.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An078.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An079.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_soil/all_part_for_ref/An085.fasta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lspec_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/lspec_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,8 +28,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+            <state relative-caret-position="525">
+              <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -368,8 +269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        <state relative-caret-position="525">
+          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>

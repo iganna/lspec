@@ -21,7 +21,7 @@ n_norm_seqs = drange(1000, 10000, 2000)
 for i, n_seq in enumerate(n_norm_seqs):
     path_to_normalized = path_to_initial + 'norm' + '{:02d}/'.format(i+1)
     path_to_db += [path_to_normalized]
-    normalize(path_to_initial, path_to_normalized, n_seq)
+    # normalize(path_to_initial, path_to_normalized, n_seq)
 
 
 
@@ -36,6 +36,7 @@ for i, n_seq in enumerate(n_norm_seqs):
 # The path with UGENE scripts
 path_to_ugene = 'ugene-spb/'
 for path_db in path_to_db:
+    print(path_db)
     d = LspecDatabase(path_db)
     # 20 is a number of threads
     d.intersection(20)
@@ -47,6 +48,14 @@ for path_db in path_to_db:
 #
 #     d = LspecDatabase(path_to_db)
 #     d.intersection(20)
+
+# --------------------------------------------------------------
+# Git signals of LSPECs in target samples
+# --------------------------------------------------------------
+# You need to set three paths:
+# path_to_lspec - path to the folder with LSPECs
+# path_to_test - path to the folder with target libraries
+#
 
 
 #
