@@ -1,6 +1,4 @@
-# Identifying components of mixed and contaminated soil samples by detecting specific signatures of control 16S rRNA libraries
-
-
+# Lspec: Identifying components of mixed and contaminated soil samples by detecting specific signatures of control 16S rRNA libraries
 
 ## Description
 
